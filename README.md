@@ -57,7 +57,7 @@ library = /usr/share/ucsm-ansible/library
 module_utils = /usr/share/ucsm-ansible/utils
 ```
 
-# Using the example files to add a NTP server
+# Using the example playbooks
 
 Create a directory and copy the example roles directory
 
@@ -95,7 +95,7 @@ ntp_server: X.X.X.X
 ucs_timezone: "America/Chicago"
 ```
 
-Running the playbook
+Run the playbook to add a NTP server
 
 ```
 ansible-playbook --ask-vault -i inventory ntp-add-server.yml
