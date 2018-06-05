@@ -123,7 +123,7 @@ Organization: Default
 ```
 
 Create a new Source within the UCS Emulator inventory.  This will reference the inventory file in the project
-and create the corresponding group and host(s).
+and dynamically create the corresponding group and host(s).
 
 ```
 Name: UCS github project
