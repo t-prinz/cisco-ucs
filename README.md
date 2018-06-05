@@ -5,11 +5,11 @@ the Cisco UCS modules.
 
 # Reference Material
 
-For the purposes of these examples, the Cisco UCS Emulator was used, which can be obtained here:
+For the purposes of these examples, the Cisco UCS Emulator was used, which can be obtained from this site:
 
 https://communities.cisco.com/docs/DOC-71877
 
-Download the User Guide from this site:
+From this site, download the User Guide:
 
 https://communities.cisco.com/servlet/JiveServlet/download/71877-10-141193/b_Cisco_UCS_Platform_Emulator_User_Guide_Release_3_1_2e_PE1.pdf
 
@@ -19,10 +19,19 @@ Cisco Communities site: https://communities.cisco.com/docs/DOC-73997
 
 Ansible Lab Guide (link also on Communities site): https://communities.cisco.com/servlet/JiveServlet/download/73997-5-148749/Ansible%20Lab%20Guide.docx
 
+Cisco UCS Ansible Roles can be obtained from this site:
+
+https://galaxy.ansible.com/CiscoUcs/ucs/
+
+```
+git clone https://github.com/ciscoucs/ansible-role-ucs CiscoUcs.ucs
+```
+
 # Ansible/Ansible Tower Control System Preparation
 
 ```
 sudo pip install ucsmsdk
+
 cd /var/tmp
 git clone https://github.com/ciscoucs/ucsm_apis
 cd ucsm_apis
@@ -46,14 +55,6 @@ Add the following to /etc/ansible/ansible.cfg in the [defaults] block
 ```
 library = /usr/share/ucsm-ansible/library
 module_utils = /usr/share/ucsm-ansible/utils
-```
-
-# Cisco UCS Ansible Roles
-
-Reference:  https://galaxy.ansible.com/CiscoUcs/ucs/
-
-```
-git clone https://github.com/ciscoucs/ansible-role-ucs CiscoUcs.ucs
 ```
 
 # Ansible Tower Setup
