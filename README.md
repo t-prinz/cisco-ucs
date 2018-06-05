@@ -9,11 +9,11 @@ For the purposes of these examples, the Cisco UCS Emulator was used, which can b
 
 https://communities.cisco.com/docs/DOC-71877
 
-From this site, download the User Guide:
+This site includes the User Guide:
 
 https://communities.cisco.com/servlet/JiveServlet/download/71877-10-141193/b_Cisco_UCS_Platform_Emulator_User_Guide_Release_3_1_2e_PE1.pdf
 
-The following Cisco Communities site has a useful Ansible Lab Guide:
+The following Cisco Communities site has a useful Ansible Lab Guide that provides the basis for the examples:
 
 Cisco Communities site: https://communities.cisco.com/docs/DOC-73997
 
@@ -57,7 +57,51 @@ library = /usr/share/ucsm-ansible/library
 module_utils = /usr/share/ucsm-ansible/utils
 ```
 
-# Ansible Tower Setup
+# Using the example files to add a NTP server
+
+Create a directory and copy the example roles directory
+
+```
+mkdir cisco-ucs
+cd cisco-ucs
+cp -r /usr/share/ucsm-ansible/roles .
+```
+
+Modify the inventory file (inventory)
+
+```
+[ucs]
+ucs-emulator ucs_ip=X.X.X.X
+```
+
+Remove the existing vault file and create a new one (vars/svars)
+
+```
+rm vars/svars
+ansible-vault create vars/svars
+
+Contents:
+---
+ucs_username: admin
+ucs_password: <password>
+```
+
+Update NTP server IP and timezone information (vars/default)
+
+```
+---
+ucs_state: present
+ntp_server: 10.5.26.10
+ucs_timezone: "America/Chicago"
+```
+
+Running the playbook
+
+```
+ansible-playbook --ask-vault -i inventory ntp-add-server.yml
+```
+
+# Using the examples with Ansible Tower
 
 Create a new Project
 
