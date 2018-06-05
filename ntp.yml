@@ -1,0 +1,25 @@
+---
+
+- hosts: ucs
+  connection: local
+  gather_facts: no
+  roles:
+  - common
+
+- name: Ensure NTP is configured
+  hosts: ucs
+  connection: local
+  gather_facts: no
+  vars_files:
+    - vars/svars.yml
+    - vars/default.yml
+
+  tasks:
+  - name: Ensure NTP is enabled
+    cisco_ucs_ntp:
+      name: "{{ntp_server}}"
+      descr: Ansible managed NTP
+      state: present
+      ucs_ip: "{{ucs_ip}}"
+      ucs_username: "{{ucs_username}}"
+      ucs_password: "{{ucs_password}}"
