@@ -91,7 +91,7 @@ Update NTP server IP and timezone information (vars/default)
 ```
 ---
 ucs_state: present
-ntp_server: 10.5.26.10
+ntp_server: X.X.X.X
 ucs_timezone: "America/Chicago"
 ```
 
