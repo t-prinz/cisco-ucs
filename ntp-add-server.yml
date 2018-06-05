@@ -6,7 +6,7 @@
   roles:
   - common
 
-- name: Ensure NTP is configured
+- name: Add to NTP server list if needed
   hosts: ucs
   connection: local
   gather_facts: no
@@ -15,7 +15,7 @@
     - vars/default.yml
 
   tasks:
-  - name: Ensure NTP is enabled
+  - name: Ensure NTP server is added
     cisco_ucs_ntp:
       name: "{{ntp_server}}"
       descr: Ansible managed NTP
