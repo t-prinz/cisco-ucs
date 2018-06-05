@@ -3,15 +3,23 @@
 This repository includes a couple of examples showing how to setup and use Ansible/Ansible Tower with
 the Cisco UCS modules.
 
-# Cisco UCS Emulator
+# Reference Material
 
-For the purposes of these examples, the Cisco UCS Emulator was used:
+For the purposes of these examples, the Cisco UCS Emulator was used, which can be obtained here:
 
 https://communities.cisco.com/docs/DOC-71877
 
-# Ansible/Ansible Tower Control System Preparation
+Download the User Guide from this site:
 
-Reference:  https://github.com/CiscoUcs/ucsm-ansible/blob/master/README.md
+https://communities.cisco.com/servlet/JiveServlet/download/71877-10-141193/b_Cisco_UCS_Platform_Emulator_User_Guide_Release_3_1_2e_PE1.pdf
+
+The following Cisco Communities site has a useful Ansible Lab Guide:
+
+Cisco Communities site: https://communities.cisco.com/docs/DOC-73997
+
+Ansible Lab Guide (link also on Communities site): https://communities.cisco.com/servlet/JiveServlet/download/73997-5-148749/Ansible%20Lab%20Guide.docx
+
+# Ansible/Ansible Tower Control System Preparation
 
 ```
 sudo pip install ucsmsdk
