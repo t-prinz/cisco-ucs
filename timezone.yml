@@ -6,7 +6,7 @@
   roles:
   - common
 
-- name: Ensure NTP is configured
+- name: Ensure timezone is configured
   hosts: ucs
   connection: local
   gather_facts: no
@@ -15,11 +15,11 @@
     - vars/default.yml
 
   tasks:
-  - name: Ensure NTP is enabled
-    cisco_ucs_ntp:
-      name: "{{ntp_server}}"
-      descr: Ansible managed NTP
+  - name: Ensure timezone is specified
+    ucs_timezone:
+      description: Ansible managed timezone
       state: present
-      ucs_ip: "{{ucs_ip}}"
-      ucs_username: "{{ucs_username}}"
-      ucs_password: "{{ucs_password}}"
+      timezone: "{{ ucs_timezone }}"
+      hostname: "{{ucs_ip}}"
+      username: "{{ucs_username}}"
+      password: "{{ucs_password}}"

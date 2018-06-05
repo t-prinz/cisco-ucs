@@ -1,2 +1,2 @@
 [ucs]
-ucs1 ucs_ip=192.168.122.34
+ucs-emulator ucs_ip=192.168.122.34
