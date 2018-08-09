@@ -1,7 +1,7 @@
 ---
 - name: Ensure desired power state
-#  hosts: ucs
-  hosts: all
+  hosts: ucs
+#  hosts: all
   connection: local
   gather_facts: no
   vars_files:
