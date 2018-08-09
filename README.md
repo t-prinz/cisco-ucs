@@ -28,8 +28,11 @@ git clone https://github.com/ciscoucs/ansible-role-ucs CiscoUcs.ucs
 ```
 
 # Ansible/Ansible Tower Control System Preparation
+
 References:
+
 https://github.com/CiscoUcs/ucsm-ansible
+
 https://github.com/CiscoUcs/ucsm_apis/blob/master/docs/installation.rst
 
 ```
