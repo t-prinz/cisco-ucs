@@ -4,7 +4,7 @@
   connection: local
   gather_facts: no
   vars:
-    - desired_power_state: off
+    - desired_power_state: on
   vars_files:
     - vars/svars.yml
 

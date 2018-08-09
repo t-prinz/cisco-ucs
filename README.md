@@ -48,13 +48,15 @@ rm -rf ucsm_apis
 
 # Test connectivity
 
+Use your IP address and credentials
+
 ```
 # python
 Python 2.7.14 (default, Apr 27 2018, 14:31:56) 
 [GCC 4.8.5 20150623 (Red Hat 4.8.5-11)] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
 >>> from ucsmsdk import ucshandle
->>> handle = ucshandle.UcsHandle(ip='http://192.168.122.34', username='admin', password='password')
+>>> handle = ucshandle.UcsHandle(ip='192.168.122.34', username='admin', password='admin')
 >>> handle.login()
 True
 ```
@@ -139,6 +141,14 @@ Create a new Inventory
 ```
 Name: UCS Emulator
 Organization: Default
+
+Click on Groups and add a new group
+Name: ucs
+
+Click on Hosts and add a new host
+Host Name: ucs-emulator
+Variables: ucs_ip: 192.168.122.34
+
 ```
 
 Create a new Source within the UCS Emulator inventory.  This will reference the inventory file in the project
@@ -172,6 +182,5 @@ Inventory: UCS Emulator
 Project: UCS
 Playbook: ntp.yml
 Credentials:
-  Type Machine - Demo Credential (Blank)
   Type Vault - UCS Vault Credential
 ```
