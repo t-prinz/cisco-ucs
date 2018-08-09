@@ -28,6 +28,9 @@ git clone https://github.com/ciscoucs/ansible-role-ucs CiscoUcs.ucs
 ```
 
 # Ansible/Ansible Tower Control System Preparation
+References:
+https://github.com/CiscoUcs/ucsm-ansible
+https://github.com/CiscoUcs/ucsm_apis/blob/master/docs/installation.rst
 
 ```
 sudo pip install ucsmsdk
@@ -38,6 +41,19 @@ cd ucsm_apis
 make install
 cd /var/tmp
 rm -rf ucsm_apis
+```
+
+# Test connectivity
+
+```
+# python
+Python 2.7.14 (default, Apr 27 2018, 14:31:56) 
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-11)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from ucsmsdk import ucshandle
+>>> handle = ucshandle.UcsHandle(ip='http://192.168.122.34', username='admin', password='password')
+>>> handle.login()
+True
 ```
 
 # Install Cisco UCS Ansible modules
