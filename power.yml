@@ -1,0 +1,17 @@
+---
+- name: Ensure desired power state
+  hosts: ucs
+  connection: local
+  gather_facts: no
+  vars_files:
+    - vars/svars.yml
+
+  tasks:
+  - name: Ensure blades/chassis power state
+    cisco_ucs_power:
+      chassis_id: "1"
+      blade_id: "1"
+      state: "on"
+      ucs_ip: "192.168.122.34"
+#      ucs_username: "admin"
+#      ucs_password: "admin"
