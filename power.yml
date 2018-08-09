@@ -3,6 +3,8 @@
   hosts: ucs
   connection: local
   gather_facts: no
+  vars:
+    - desired_power_state: off
   vars_files:
     - vars/svars.yml
 
@@ -11,7 +13,7 @@
     cisco_ucs_power:
       chassis_id: "1"
       blade_id: "1"
-      state: "on"
+      state: "{{ desired_power_state }}"
       ucs_ip: "192.168.122.34"
 #      ucs_username: "admin"
 #      ucs_password: "admin"
