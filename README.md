@@ -9,7 +9,7 @@ For the purposes of these examples, the Cisco UCS Emulator was used, which can b
 
 https://communities.cisco.com/docs/DOC-71877
 
-The following Cisco Communities site has a useful Ansible Lab Guide that provides the basis for the examples:
+The following Cisco Communities site has a useful Ansible Lab Guide that provides the basis for the examples (note the Ansible Lab Guide.doc referenced at the bottom of the page; this outlines the preparation process):
 
 Cisco Communities site: https://communities.cisco.com/docs/DOC-73997
 
