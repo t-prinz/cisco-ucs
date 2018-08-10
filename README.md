@@ -9,9 +9,15 @@ For the purposes of these examples, the Cisco UCS Emulator was used, which can b
 
 https://communities.cisco.com/docs/DOC-71877
 
-The following Cisco Communities site has a useful Ansible Lab Guide that provides the basis for the examples (note the Ansible Lab Guide.doc referenced at the bottom of the page; this outlines the preparation process):
+The following Cisco Communities site has a useful Ansible Lab Guide that provides the basis for the examples (note the "Ansible Lab Guide.doc" referenced at the bottom of the page; this outlines the preparation process):
 
 Cisco Communities site: https://communities.cisco.com/docs/DOC-73997
+
+Additional references for ucsm-ansible and ucsm-apis:
+
+https://github.com/CiscoUcs/ucsm-ansible
+
+https://github.com/CiscoUcs/ucsm_apis/blob/master/docs/installation.rst
 
 Cisco UCS Ansible Roles can be obtained from this site:
 
@@ -22,12 +28,6 @@ git clone https://github.com/ciscoucs/ansible-role-ucs CiscoUcs.ucs
 ```
 
 # Ansible/Ansible Tower Control System Preparation
-
-Additional references:
-
-https://github.com/CiscoUcs/ucsm-ansible
-
-https://github.com/CiscoUcs/ucsm_apis/blob/master/docs/installation.rst
 
 ```
 sudo pip install ucsmsdk
