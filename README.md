@@ -92,7 +92,7 @@ Modify the inventory file (inventory)
 
 ```
 [ucs]
-ucs-emulator ucs_ip=X.X.X.X
+ucs-emulator ucs_ip=192.168.122.34
 ```
 
 Remove the existing vault file and create a new one (vars/svars)
